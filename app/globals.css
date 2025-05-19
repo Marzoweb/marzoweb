@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 210 90% 50%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 200 75% 40%;
+  --secondary-foreground: 0 0% 100%;
+
+  --background: 0 0% 100%;
+  --foreground: 220 20% 20%;
+
+  --muted: 210 20% 97%;
+  --muted-foreground: 220 10% 45%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 220 20% 20%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 20% 20%;
+
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+
+  --accent: 210 20% 97%;
+  --accent-foreground: 220 20% 20%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --ring: 210 90% 50%;
+
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.gradient-bg-soft {
+  background: linear-gradient(to bottom, #f8fafc, #ffffff);
+}
+
+.gradient-bg-blue {
+  background: linear-gradient(to bottom, #e6f0fa, #ffffff);
+}
+
+.gradient-bg-footer {
+  background: linear-gradient(to bottom, #1c2b39, #162330);
+}
+
+.shadow-soft {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Animation utilities */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.5s ease-in-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-in-out;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.6s ease-in-out;
+}
+
+/* Decorative patterns */
+.pattern-dots {
+  background-image: radial-gradient(#0056b3 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.pattern-grid {
+  background-image: linear-gradient(to right, #e6f0fa 1px, transparent 1px),
+    linear-gradient(to bottom, #e6f0fa 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.pattern-diagonal {
+  background-image: repeating-linear-gradient(45deg, #0056b3 0, #0056b3 1px, transparent 0, transparent 50%);
+  background-size: 20px 20px;
+  opacity: 0.05;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add styles for blog content */
+.prose {
+  max-width: 65ch;
+  color: #374151;
+}
+
+.prose h2 {
+  color: #1f2937;
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.3333333;
+}
+
+.prose p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.prose ul {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  padding-left: 1.625em;
+  list-style-type: disc;
+}
+
+.prose li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose a {
+  color: #0056b3;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.prose a:hover {
+  color: #004494;
+}
+
+/* Ensure proper iframe sizing */
+.template-viewer-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.template-viewer-iframe {
+  flex: 1;
+  border: none;
+}
