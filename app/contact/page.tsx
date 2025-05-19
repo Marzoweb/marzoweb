@@ -37,13 +37,16 @@ export default function ContactPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       })
+
       if (res.ok) {
         setFormState("success")
         form.reset()
+        setTimeout(() => setFormState("idle"), 5000)
       } else {
         setFormState("error")
       }
-    } catch {
+    } catch (error) {
+      console.error('Submission error:', error)
       setFormState("error")
     }
   }

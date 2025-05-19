@@ -4,8 +4,9 @@
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import {Suspense} from "react";
 
-export default function TemplateViewer() {
+ function TemplateViewerInner() {
     const searchParams = useSearchParams()
     const template = searchParams.get('template')
 
@@ -93,5 +94,13 @@ export default function TemplateViewer() {
                 </a>
             </div>
         </div>
+    )
+}
+
+export default function TemplateViewer() {
+    return (
+        <Suspense fallback={<div>Loading template...</div>}>
+            <TemplateViewerInner />
+        </Suspense>
     )
 }
