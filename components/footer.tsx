@@ -75,8 +75,8 @@ export default function Footer() {
 
           <div className="space-y-4">
             <h3 className="text-lg font-bold">Connect</h3>
-            <div className="flex space-x-4">
-              {/*<Link href="#" className="text-gray-300 hover:text-white transition-colors">
+            {/*<div className="flex space-x-4">
+              <Link href="#" className="text-gray-300 hover:text-white transition-colors">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
@@ -91,12 +91,12 @@ export default function Footer() {
               <Link href="#" className="text-gray-300 hover:text-white transition-colors">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
-              </Link>*/}
+              </Link>
               <Link href="https://www.facebook.com/MarzoWeb/" target="_blank" className="text-gray-300 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
-            </div>
+            </div>*/}
             <div className="pt-2">
               <p className="text-gray-300">Email: marzowebagency@gmail.com</p>
             </div>

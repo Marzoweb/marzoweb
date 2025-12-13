@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_MARZOWEB, // Send to yourself
+      to: 'marzowebagency@gmail.com', 
       replyTo: email,
       subject: `Contact Form: ${subject || 'New message from your website'}`,
       html: `

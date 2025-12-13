@@ -34,37 +34,33 @@ export default function Navbar() {
         <nav className="hidden md:flex gap-6">
           <Link
             href="/"
-            className={`text-base font-medium hover:text-[#0056b3] transition-colors ${
-              pathname === "/" ? "text-[#0056b3]" : "text-gray-700"
-            }`}
+            className={`text-base font-medium hover:text-[#0056b3] transition-colors ${pathname === "/" ? "text-[#0056b3]" : "text-gray-700"
+              }`}
           >
             Home
           </Link>
           <Link
             href="/services"
-            className={`text-base font-medium hover:text-[#0056b3] transition-colors ${
-              pathname.startsWith("/services") ? "text-[#0056b3]" : "text-gray-700"
-            }`}
+            className={`text-base font-medium hover:text-[#0056b3] transition-colors ${pathname.startsWith("/services") ? "text-[#0056b3]" : "text-gray-700"
+              }`}
           >
             Services
           </Link>
-          {/*<Link
-            href="/portfolio"
-            className={`text-base font-medium hover:text-[#0056b3] transition-colors ${
-              pathname.startsWith("/portfolio") ? "text-[#0056b3]" : "text-gray-700"
-            }`}
+          <Link
+            href="/realisation"
+            className={`text-base font-medium hover:text-[#0056b3] transition-colors ${pathname.startsWith("/realisation") ? "text-[#0056b3]" : "text-gray-700"
+              }`}
           >
-            Portfolio
-          </Link>*/}
+            Realisation
+          </Link>
           <Link
             href="/templates"
-            className={`text-base font-medium hover:text-[#0056b3] transition-colors ${
-              pathname.startsWith("/templates") ? "text-[#0056b3]" : "text-gray-700"
-            }`}
+            className={`text-base font-medium hover:text-[#0056b3] transition-colors ${pathname.startsWith("/templates") ? "text-[#0056b3]" : "text-gray-700"
+              }`}
           >
             Templates
           </Link>
-         {/* <Link
+          {/* <Link
             href="/blog"
             className={`text-base font-medium hover:text-[#0056b3] transition-colors ${
               pathname.startsWith("/blog") ? "text-[#0056b3]" : "text-gray-700"
@@ -74,9 +70,8 @@ export default function Navbar() {
           </Link>*/}
           <Link
             href="/contact"
-            className={`text-base font-medium hover:text-[#0056b3] transition-colors ${
-              pathname.startsWith("/contact") ? "text-[#0056b3]" : "text-gray-700"
-            }`}
+            className={`text-base font-medium hover:text-[#0056b3] transition-colors ${pathname.startsWith("/contact") ? "text-[#0056b3]" : "text-gray-700"
+              }`}
           >
             Contact
           </Link>
@@ -106,54 +101,48 @@ export default function Navbar() {
                 <nav className="flex flex-col gap-4">
                   <Link
                     href="/"
-                    className={`text-lg font-medium hover:text-[#0056b3] ${
-                      pathname === "/" ? "text-[#0056b3]" : "text-gray-700"
-                    }`}
+                    className={`text-lg font-medium hover:text-[#0056b3] ${pathname === "/" ? "text-[#0056b3]" : "text-gray-700"
+                      }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Home
                   </Link>
                   <Link
                     href="/services"
-                    className={`text-lg font-medium hover:text-[#0056b3] ${
-                      pathname.startsWith("/services") ? "text-[#0056b3]" : "text-gray-700"
-                    }`}
+                    className={`text-lg font-medium hover:text-[#0056b3] ${pathname.startsWith("/services") ? "text-[#0056b3]" : "text-gray-700"
+                      }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Services
                   </Link>
-                  {/*<Link
-                    href="/portfolio"
-                    className={`text-lg font-medium hover:text-[#0056b3] ${
-                      pathname.startsWith("/portfolio") ? "text-[#0056b3]" : "text-gray-700"
-                    }`}
+                  <Link
+                    href="/realisation"
+                    className={`text-lg font-medium hover:text-[#0056b3] ${pathname.startsWith("/realisation") ? "text-[#0056b3]" : "text-gray-700"
+                      }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Portfolio
-                  </Link>*/}
+                    Realisation
+                  </Link>
                   <Link
                     href="/templates"
-                    className={`text-lg font-medium hover:text-[#0056b3] ${
-                      pathname.startsWith("/templates") ? "text-[#0056b3]" : "text-gray-700"
-                    }`}
+                    className={`text-lg font-medium hover:text-[#0056b3] ${pathname.startsWith("/templates") ? "text-[#0056b3]" : "text-gray-700"
+                      }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Templates
                   </Link>
                   <Link
                     href="/blog"
-                    className={`text-lg font-medium hover:text-[#0056b3] ${
-                      pathname.startsWith("/blog") ? "text-[#0056b3]" : "text-gray-700"
-                    }`}
+                    className={`text-lg font-medium hover:text-[#0056b3] ${pathname.startsWith("/blog") ? "text-[#0056b3]" : "text-gray-700"
+                      }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Blog
                   </Link>
                   <Link
                     href="/contact"
-                    className={`text-lg font-medium hover:text-[#0056b3] ${
-                      pathname.startsWith("/contact") ? "text-[#0056b3]" : "text-gray-700"
-                    }`}
+                    className={`text-lg font-medium hover:text-[#0056b3] ${pathname.startsWith("/contact") ? "text-[#0056b3]" : "text-gray-700"
+                      }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Contact

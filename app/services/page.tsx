@@ -77,10 +77,11 @@ export default function ServicesPage() {
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#0056b3]/5 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#0056b3]/5 rounded-full blur-3xl"></div>
 
+
         <div className="container mx-auto max-w-6xl relative z-10">
           <Tabs defaultValue="web" className="w-full">
             <div className="flex justify-center mb-12">
-              <TabsList className="bg-gray-100 p-1">
+              <TabsList className="bg-gray-100 p-1 flex-wrap justify-center h-auto">
                 <TabsTrigger
                   value="web"
                   className="data-[state=active]:bg-[#0056b3] data-[state=active]:text-white px-6 py-2"
@@ -104,6 +105,12 @@ export default function ServicesPage() {
                   className="data-[state=active]:bg-[#0056b3] data-[state=active]:text-white px-6 py-2"
                 >
                   Automation
+                </TabsTrigger>
+                <TabsTrigger
+                  value="motion"
+                  className="data-[state=active]:bg-[#0056b3] data-[state=active]:text-white px-6 py-2"
+                >
+                  Motion Graphics
                 </TabsTrigger>
               </TabsList>
             </div>
@@ -176,7 +183,7 @@ export default function ServicesPage() {
                     <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#0056b3]/10 rounded-full blur-xl"></div>
                     <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-[#0056b3]/5 rounded-full blur-xl"></div>
                     <Image
-                      src="/web_service.png?height=500&width=600&text=Web+Development"
+                      src="/web_dev_modern.png"
                       alt="Web Development"
                       width={600}
                       height={500}
@@ -255,7 +262,7 @@ export default function ServicesPage() {
                     <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#0056b3]/10 rounded-full blur-xl"></div>
                     <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-[#0056b3]/5 rounded-full blur-xl"></div>
                     <Image
-                      src="/phone_mockup.jpg?height=500&width=600&text=Mobile+Development"
+                      src="/mobile_app_modern.png"
                       alt="Mobile Development"
                       width={600}
                       height={500}
@@ -269,10 +276,10 @@ export default function ServicesPage() {
             <TabsContent value="design" className="mt-0">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.7 }}
-                    viewport={{ once: true }}
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
                 >
                   <h2 className="text-3xl font-bold mb-6 text-gray-800">Exceptional UI/UX Design</h2>
                   <p className="text-lg text-gray-600 mb-6">
@@ -325,20 +332,20 @@ export default function ServicesPage() {
                 </motion.div>
 
                 <motion.div
-                    initial={{ opacity: 0, x: 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.7 }}
-                    viewport={{ once: true }}
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
                 >
                   <div className="relative">
                     <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#0056b3]/10 rounded-full blur-xl"></div>
                     <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-[#0056b3]/5 rounded-full blur-xl"></div>
                     <Image
-                        src="/uiuxdesign.webp?height=500&width=600&text=Mobile+Development"
-                        alt="Mobile Development"
-                        width={600}
-                        height={500}
-                        className="rounded-xl shadow-soft relative z-10"
+                      src="/ui_ux_modern.png"
+                      alt="UI/UX Design"
+                      width={600}
+                      height={500}
+                      className="rounded-xl shadow-soft relative z-10"
                     />
                   </div>
                 </motion.div>
@@ -413,8 +420,87 @@ export default function ServicesPage() {
                     <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#0056b3]/10 rounded-full blur-xl"></div>
                     <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-[#0056b3]/5 rounded-full blur-xl"></div>
                     <Image
-                      src="/automation.png?height=500&width=600&text=Mobile+Development"
+                      src="/automation_modern.png"
                       alt="Automation"
+                      width={600}
+                      height={500}
+                      className="rounded-xl shadow-soft relative z-10"
+                    />
+                  </div>
+                </motion.div>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="motion" className="mt-0">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl font-bold mb-6 text-gray-800">Motion Graphics</h2>
+                  <p className="text-lg text-gray-600 mb-6">
+                    Bring your brand to life with captivating motion graphics. We create dynamic visual content that engages audiences and communicates your message effectively.
+                  </p>
+
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 bg-[#0056b3]/10 p-2 rounded-lg">
+                        <Zap className="h-5 w-5 text-[#0056b3]" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-800">2D & 3D Animation</h3>
+                        <p className="text-gray-600">
+                          High-quality animations to explain concepts, showcase products, or enhance your brand.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 bg-[#0056b3]/10 p-2 rounded-lg">
+                        <Layers className="h-5 w-5 text-[#0056b3]" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-800">Logo Animation</h3>
+                        <p className="text-gray-600">
+                          Dynamic logo reveals to make your brand memorable.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 bg-[#0056b3]/10 p-2 rounded-lg">
+                        <Globe className="h-5 w-5 text-[#0056b3]" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-800">Explainer Videos</h3>
+                        <p className="text-gray-600">
+                          Engaging videos that simplify complex ideas and drive conversions.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <Link href="/contact">
+                    <Button className="bg-[#0056b3] hover:bg-[#004494] text-white px-6 py-5 rounded-lg shadow-soft">
+                      Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="relative">
+                    <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#0056b3]/10 rounded-full blur-xl"></div>
+                    <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-[#0056b3]/5 rounded-full blur-xl"></div>
+                    <Image
+                      src="/motion_graphics_modern.png"
+                      alt="Motion Graphics"
                       width={600}
                       height={500}
                       className="rounded-xl shadow-soft relative z-10"
@@ -507,9 +593,19 @@ export default function ServicesPage() {
                 features={["User Research", "Wireframing", "Prototyping", "Usability Testing"]}
               />
             </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <ServiceDetailCard
+                icon={<Zap className="h-10 w-10 text-[#0056b3]" />}
+                title="Motion Graphics"
+                description="Dynamic visual content that brings your brand story to life through animation."
+                features={["2D & 3D Animation", "Logo Animation", "Explainer Videos", "Visual Effects"]}
+              />
+            </motion.div>
           </motion.div>
         </div>
       </section>
+
 
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-[#0056b3] to-[#0077cc] relative overflow-hidden">
