@@ -60,6 +60,14 @@ export default function Navbar() {
           >
             Templates
           </Link>
+          <Link
+            href="/virtual-tour"
+            className={`text-base font-medium hover:text-[#0056b3] transition-colors flex items-center gap-1 ${pathname.startsWith("/virtual-tour") ? "text-[#0056b3]" : "text-gray-700"
+              }`}
+          >
+            Virtual Tour
+            <span className="bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold animate-pulse">NEW</span>
+          </Link>
           {/* <Link
             href="/blog"
             className={`text-base font-medium hover:text-[#0056b3] transition-colors ${
@@ -132,6 +140,15 @@ export default function Navbar() {
                     Templates
                   </Link>
                   <Link
+                    href="/virtual-tour"
+                    className={`text-lg font-medium hover:text-[#0056b3] flex items-center gap-2 ${pathname.startsWith("/virtual-tour") ? "text-[#0056b3]" : "text-gray-700"
+                      }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Virtual Tour
+                    <span className="bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">NEW</span>
+                  </Link>
+                  <Link
                     href="/blog"
                     className={`text-lg font-medium hover:text-[#0056b3] ${pathname.startsWith("/blog") ? "text-[#0056b3]" : "text-gray-700"
                       }`}
@@ -164,6 +181,6 @@ export default function Navbar() {
           </Button>
         </div>
       </div>
-    </motion.header>
+    </motion.header >
   )
 }
