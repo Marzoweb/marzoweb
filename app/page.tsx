@@ -4,7 +4,7 @@ import type React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Code, Globe, Smartphone, Zap, ArrowRight } from "lucide-react"
+import { Code, Globe, Smartphone, Zap, ArrowRight, Glasses } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import TestimonialCard from "@/components/testimonial-card"
@@ -120,6 +120,20 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Virtual Tour Promo Bar - New Addition */}
+      <section className="bg-[#0056b3] text-white py-4 px-6 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('/assets/360-placeholder.png')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+        <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4 relative z-10">
+          <div className="flex items-center gap-3">
+            <span className="bg-white text-[#0056b3] text-xs font-bold px-2 py-1 rounded animate-pulse">NEW</span>
+            <p className="font-medium">Discover our immersive 360° Virtual Tours service!</p>
+          </div>
+          <Link href="/virtual-tour" className="flex items-center gap-2 group hover:text-white/80 transition-colors font-semibold text-sm">
+            Take a Tour <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
+      </section>
+
       {/* Logo Slider Section */}
       {/*<LogoSlider clients={clientLogos} />*/}
 
@@ -167,6 +181,13 @@ export default function Home() {
                 icon={<Code className="h-10 w-10 text-[#0056b3]" />}
                 title="Business Automation"
                 description="Streamline your operations with custom web applications and automation tools."
+              />
+            </motion.div>
+            <motion.div variants={fadeInUp}>
+              <ServiceCard
+                icon={<Glasses className="h-10 w-10 text-[#0056b3]" />}
+                title="360° Virtual Tours"
+                description="Immersive interactive tours for real estate, showrooms, and exhibitions. (New!)"
               />
             </motion.div>
             <motion.div variants={fadeInUp}>
