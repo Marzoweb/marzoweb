@@ -116,7 +116,10 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${inter.className} min-h-screen flex flex-col bg-white`}>
+      <body
+        className={`${inter.className} min-h-screen flex flex-col bg-white`}
+        suppressHydrationWarning
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
