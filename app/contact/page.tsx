@@ -162,7 +162,7 @@ export default function ContactPage() {
           <div className="flex flex-col md:flex-row lg:flex-col items-center gap-6 mb-8">
             <div className="w-32 h-32 relative border-2 border-gray-200 rounded-full flex items-center justify-center">
               <Image
-                src="/MARZOlogo.png"
+                src="/MARZOLogo.png"
                 alt="Profile Photo"
                 width={128}
                 height={128}
