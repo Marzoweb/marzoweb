@@ -100,10 +100,13 @@ export default function Footer() {
             <div className="pt-2">
               <p className="text-gray-300">Email: marzowebagency@gmail.com</p>
             </div>
+            <div className="pt-2">
+              <p className="text-gray-300">Phone: +212 781-603634</p>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-700/50 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        {/*<div className="border-t border-gray-700/50 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300 text-sm">© {new Date().getFullYear()} <span className={leagueSpartan.className}>MARZO</span><span className={kalam.className}>WEB</span>. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <Link href="#" className="text-sm text-gray-300 hover:text-white transition-colors">
@@ -113,7 +116,7 @@ export default function Footer() {
               Terms of Service
             </Link>
           </div>
-        </div>
+        </div>*/}
       </div>
     </footer>
   )

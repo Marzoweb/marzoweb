@@ -81,14 +81,16 @@ export default function Home() {
             <p className="text-xl text-gray-600">
               We design and build websites, web applications, and mobile apps tailored to your business goals.
             </p>
-            <div className="pt-4 flex flex-wrap gap-4">
+            <Link href="/portfolio">
               <Button className="bg-[#0056b3] hover:bg-[#004494] text-white px-8 py-6 text-lg rounded-lg shadow-soft">
                 View Our Work
               </Button>
+            </Link>
+            <Link href="/contact">
               <Button variant="outline" className="border-[#0056b3] text-[#0056b3] px-8 py-6 text-lg rounded-lg">
                 Get in Touch
               </Button>
-            </div>
+            </Link>
           </motion.div>
           <motion.div
             className="lg:w-1/2"
