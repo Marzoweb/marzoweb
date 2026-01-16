@@ -81,7 +81,7 @@ export default function Home() {
             <p className="text-xl text-gray-600">
               We design and build websites, web applications, and mobile apps tailored to your business goals.
             </p>
-            <Link href="/portfolio">
+            <Link href="/templates">
               <Button className="bg-[#0056b3] hover:bg-[#004494] text-white px-8 py-6 text-lg rounded-lg shadow-soft">
                 View Our Work
               </Button>

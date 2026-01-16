@@ -47,11 +47,11 @@ export default function Navbar() {
             Services
           </Link>
           <Link
-            href="/realisation"
-            className={`text-base font-medium hover:text-[#0056b3] transition-colors ${pathname.startsWith("/realisation") ? "text-[#0056b3]" : "text-gray-700"
+            href="/tools"
+            className={`text-base font-medium hover:text-[#0056b3] transition-colors ${pathname.startsWith("/tools") ? "text-[#0056b3]" : "text-gray-700"
               }`}
           >
-            Realisation
+            Tools
           </Link>
           <Link
             href="/templates"
@@ -122,6 +122,14 @@ export default function Navbar() {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Services
+                  </Link>
+                  <Link
+                    href="/tools"
+                    className={`text-lg font-medium hover:text-[#0056b3] ${pathname.startsWith("/tools") ? "text-[#0056b3]" : "text-gray-700"
+                      }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Tools
                   </Link>
                   <Link
                     href="/realisation"

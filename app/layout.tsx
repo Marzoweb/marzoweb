@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png", // Ensure you have this image or use a placeholder
+        url: "/icon.png", // Ensure you have this image or use a placeholder
         width: 1200,
         height: 630,
         alt: "MARZOWEB - Agence Web Maroc",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "MARZOWEB - Agence Web Maroc",
     description: "Expert web development and digital solutions in Morocco.",
     creator: "@marzoweb", // Update if you have a handle
-    images: ["/og-image.png"],
+    images: ["/icon.png"],
   },
   robots: {
     index: true,
@@ -88,7 +88,7 @@ export default function RootLayout({
     image: "https://marzoweb.com/icon.png",
     "@id": "https://marzoweb.com",
     url: "https://marzoweb.com",
-    telephone: "+212600000000", // Update with real number if available
+    telephone: "+212781603634", // Update with real number if available
     address: {
       "@type": "PostalAddress",
       addressLocality: "Casablanca", // Giving a default major city if not specified, user can update
