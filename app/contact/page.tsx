@@ -19,7 +19,7 @@ const kalam = Kalam({ subsets: ["latin"], weight: ["700"] })
 export default function ContactPage() {
   const [formState, setFormState] = useState<"idle" | "submitting" | "success" | "error">("idle")
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setFormState("submitting")
 
@@ -29,17 +29,29 @@ export default function ContactPage() {
     const subject = (form.elements.namedItem("subject") as HTMLInputElement)?.value || "New Contact"
     const message = (form.elements.namedItem("message") as HTMLInputElement)?.value
 
-    // Construct mailto link
-    const mailtoLink = `mailto:marzowebagency@gmail.com?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, subject, message }),
+      })
 
-    // Open mail client
-    window.location.href = mailtoLink
-
-    setFormState("success")
-    form.reset()
-    setTimeout(() => setFormState("idle"), 5000)
+      if (response.ok) {
+        setFormState("success")
+        form.reset()
+      } else {
+        const data = await response.json()
+        console.error("Submission error:", data.error)
+        setFormState("error")
+      }
+    } catch (error) {
+      console.error("Submission failed:", error)
+      setFormState("error")
+    } finally {
+      setTimeout(() => setFormState("idle"), 5000)
+    }
   }
 
   return (
