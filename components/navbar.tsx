@@ -47,13 +47,6 @@ export default function Navbar() {
             Services
           </Link>
           <Link
-            href="/realisation"
-            className={`text-base font-medium hover:text-[#0056b3] transition-colors ${pathname.startsWith("/realisation") ? "text-[#0056b3]" : "text-gray-700"
-              }`}
-          >
-            Realisation
-          </Link>
-          <Link
             href="/templates"
             className={`text-base font-medium hover:text-[#0056b3] transition-colors ${pathname.startsWith("/templates") ? "text-[#0056b3]" : "text-gray-700"
               }`}
