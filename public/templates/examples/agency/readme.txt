@@ -14,7 +14,7 @@ stand out!
 
 LICENSE:
 
-This free resource is provided by styleshout.com and is free to use in 
+This free resource is provided by marzoweb.com and is free to use in 
 both personal and commercial projects.
 
 
@@ -126,6 +126,6 @@ Javascript Files:
 -------------------------------------------------------------------------------------------------------
 
 
-Thanks for downloading from StyleShout :)
+Thanks for downloading from MarzoWeb :)
 
 
