@@ -68,14 +68,7 @@ export default function Navbar() {
             Virtual Tour
             <span className="bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold animate-pulse">NEW</span>
           </Link>
-          {/* <Link
-            href="/blog"
-            className={`text-base font-medium hover:text-[#0056b3] transition-colors ${
-              pathname.startsWith("/blog") ? "text-[#0056b3]" : "text-gray-700"
-            }`}
-          >
-            Blog
-          </Link>*/}
+
           <Link
             href="/contact"
             className={`text-base font-medium hover:text-[#0056b3] transition-colors ${pathname.startsWith("/contact") ? "text-[#0056b3]" : "text-gray-700"
@@ -156,14 +149,7 @@ export default function Navbar() {
                     Virtual Tour
                     <span className="bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">NEW</span>
                   </Link>
-                  <Link
-                    href="/blog"
-                    className={`text-lg font-medium hover:text-[#0056b3] ${pathname.startsWith("/blog") ? "text-[#0056b3]" : "text-gray-700"
-                      }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Blog
-                  </Link>
+
                   <Link
                     href="/contact"
                     className={`text-lg font-medium hover:text-[#0056b3] ${pathname.startsWith("/contact") ? "text-[#0056b3]" : "text-gray-700"

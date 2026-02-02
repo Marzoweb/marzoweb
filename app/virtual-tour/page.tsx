@@ -6,6 +6,12 @@ import { motion } from "framer-motion"
 import { Globe, Zap, Smartphone, ArrowRight, Eye, MousePointerClick, Clock, Glasses, Info } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "360° Virtual Tours - MARZOWEB",
+    description: "Immersive 360-degree virtual tours for real estate, showrooms, and businesses. Increase engagement with interactive experiences.",
+}
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function VirtualTourPage() {

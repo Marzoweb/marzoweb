@@ -4,6 +4,12 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { FileSpreadsheet, FileText, Image as ImageIcon, FileCode } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Developer Tools - MARZOWEB",
+    description: "Free online developer tools: Image to Excel, PDF to Excel, Image to SVG Vectorizer, and more.",
+}
 
 export default function ToolsPage() {
     const fadeInUp = {

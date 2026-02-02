@@ -4,6 +4,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Website Templates - MARZOWEB",
+  description: "Browse our collection of professional website templates. Live previews available for restaurants, portfolios, businesses, and more.",
+}
 
 export default function TemplatesPage() {
   return (
