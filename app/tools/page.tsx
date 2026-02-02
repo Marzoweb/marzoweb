@@ -2,8 +2,14 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { FileSpreadsheet, FileText, Image as ImageIcon } from "lucide-react"
+import { FileSpreadsheet, FileText, Image as ImageIcon, FileCode } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Developer Tools - MARZOWEB",
+    description: "Free online developer tools: Image to Excel, PDF to Excel, Image to SVG Vectorizer, and more.",
+}
 
 export default function ToolsPage() {
     const fadeInUp = {
@@ -65,6 +71,36 @@ export default function ToolsPage() {
                                     </CardHeader>
                                 </Card>
                             </Link>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeInUp}
+                        className="mt-16"
+                    >
+                        <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                            <FileCode className="text-purple-600" />
+                            Design Tools
+                        </h2>
+
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <Link href="/tools/vectorize" className="block group">
+                                <Card className="h-full hover:shadow-lg transition-all duration-300 border-gray-200 group-hover:border-purple-600">
+                                    <CardHeader>
+                                        <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-600 transition-colors">
+                                            <FileCode className="text-purple-600 group-hover:text-white transition-colors" />
+                                        </div>
+                                        <CardTitle className="text-xl">Image to SVG Vectorizer</CardTitle>
+                                        <CardDescription>
+                                            Convert raster images (JPG, PNG) and PDFs into scalable SVG vectors.
+                                        </CardDescription>
+                                    </CardHeader>
+                                </Card>
+                            </Link>
+
                         </div>
                     </motion.div>
                 </div>
